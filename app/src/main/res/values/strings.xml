@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">153059007</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_help">Help</string>
+    <string name="action_check_updates">Check for updates</string>
+    <string name="action_location_found">Location</string>
+    <string name="action_search">Search</string>
+    <string name="action_record">Record</string>
+    <string name="loginactivity_new_message">Login</string>
+    <string name="sensorsactivity_new_message">Sensors</string>
+    <string name="recordactivity_new_message">Record</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_in_short">SignIn</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_firstname">Firstname</string>
+    <string name="prompt_lastname">Lastname</string>
+    <string name="prompt_phone">Mobile No</string>
+    <string name="prompt_age">Age</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_password">Arial</string>
+    <string name="accelerometer_text">Accelerometer</string>
+    <string name="gps_text">GPS</string>
+    <string name="recording_text">Start Recording</string>
+    <string name="error_field_required">Required Field</string>
+    <string name="error_invalid_email">Enter valid email. Should contain @ </string>
+    <string name="error_invalid_mobile">Enter 10 digit mobile number</string>
+</resources>

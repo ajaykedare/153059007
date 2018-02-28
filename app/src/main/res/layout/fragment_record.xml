@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.ac.iitb.cse.a153059007.LoginActivityFragment"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+        <TextView
+            android:id="@+id/start_textview"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recording_text"
+            android:textSize="20dp"
+            android:fontFamily="@string/hint_password"
+            />
+
+        <Switch
+            android:id="@+id/on_off_switch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:layout_toRightOf="@+id/start_textview"
+            />
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/ts_list_textview"
+        android:paddingRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last 5 Recordings"
+        android:textSize="30dp"
+        android:fontFamily="@string/hint_password"/>
+
+        <TextView
+            android:id="@+id/user"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is Accel :"
+            android:textSize="30dp"
+            android:fontFamily="@string/hint_password"/>
+        <TextView
+            android:id="@+id/gpsdata"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is GPS :"
+            android:textSize="30dp"
+            android:fontFamily="@string/hint_password"/>
+    <TextView
+        android:id="@+id/test"
+        android:paddingRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AccelSwitchStatus :"
+        android:textSize="30dp"
+        android:fontFamily="@string/hint_password"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/records_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
