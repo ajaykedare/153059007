@@ -1,5 +1,7 @@
 package in.ac.iitb.cse.a153059007;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -34,9 +36,9 @@ public class LoginActivityFragment extends Fragment{
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        mEmailView = (AutoCompleteTextView) view.findViewById(R.id.email);
         mFirstnameView = (AutoCompleteTextView) view.findViewById(R.id.firstname);
         mLastnameView= (AutoCompleteTextView) view.findViewById(R.id.lastname);
+        mEmailView = (AutoCompleteTextView) view.findViewById(R.id.email);
         mMobileNoView = (AutoCompleteTextView) view.findViewById(R.id.phone);
         mAgeView = (AutoCompleteTextView) view.findViewById(R.id.age);
         mGenderView = (RadioGroup) view.findViewById(R.id.gender_radio_group);
@@ -48,6 +50,38 @@ public class LoginActivityFragment extends Fragment{
             }
         });
 
+
+        //Set the values from stored values
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences(getString(R.string.PREF_FILE), Context.MODE_PRIVATE);
+        boolean isComplete = sharedPreferences.getBoolean("isComplete", false);
+
+        if(isComplete){
+            mFirstnameView.setText(sharedPreferences.getString("firstname",""));
+            mLastnameView.setText(sharedPreferences.getString("lastname",""));
+            mEmailView.setText(sharedPreferences.getString("email",""));
+            mMobileNoView.setText(sharedPreferences.getString("mobile",""));
+            mAgeView.setText(sharedPreferences.getString("age",""));
+
+            // Also set User object values
+
+            //Store in class to be verified in RecordFragment
+            User.firstname = sharedPreferences.getString("firstname","");
+            User.lastname = sharedPreferences.getString("lastname","");
+            User.email = sharedPreferences.getString("email","");
+            User.mobile = sharedPreferences.getString("mobile","");
+            User.age = sharedPreferences.getString("age","");
+
+            User.isComplete = true;
+
+
+            if(sharedPreferences.getString("gender","male").equals("male")){
+                mGenderView.check(R.id.male_radio_btn);
+                User.gender = "male";
+            } else {
+                User.gender = "female";
+                mGenderView.check(R.id.female_radio_btn);
+            }
+        }
         return view;
     }
 
@@ -140,6 +174,7 @@ public class LoginActivityFragment extends Fragment{
             Toast.makeText(getContext(),"Success!", Toast.LENGTH_SHORT).show();
             //All fields are valid
 
+            //Store in class to be verified in RecordFragment
             User.firstname = firstname;
             User.lastname = lastname;
             User.email = email;
@@ -147,6 +182,18 @@ public class LoginActivityFragment extends Fragment{
             User.age = age;
             User.gender = txt;
             User.isComplete = true;
+
+            //Also persist the data
+            SharedPreferences sharedPreferences = getContext().getSharedPreferences(getString(R.string.PREF_FILE), Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("firstname", firstname);
+            editor.putString("lastname", lastname);
+            editor.putString("email", email);
+            editor.putString("mobile", mobile);
+            editor.putString("age", age);
+            editor.putString("gender", txt);
+            editor.putBoolean("isComplete", true);
+            editor.commit();
 //            Intent intent = new Intent(getApplicationContext(), SensorsActivity.class);
 //            startActivity(intent);
         }
@@ -156,7 +203,6 @@ public class LoginActivityFragment extends Fragment{
     boolean isEmailValid(String e){
         return e.contains("@");
     }
-
     boolean isMobileValid(String m){
         return m.length()==10;
     }

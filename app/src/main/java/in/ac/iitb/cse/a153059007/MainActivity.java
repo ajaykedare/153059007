@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Login"));
         tabLayout.addTab(tabLayout.newTab().setText("Sensors"));
         tabLayout.addTab(tabLayout.newTab().setText("Record"));
+        tabLayout.addTab(tabLayout.newTab().setText("SVM"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);

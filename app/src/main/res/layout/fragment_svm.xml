@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.ac.iitb.cse.a153059007.SVMActivityFragment"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <Button
+            android:id="@+id/pickdatafile_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pick Data File"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/datafileStatic_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/hint_password"
+            android:paddingRight="15dp"
+            android:text="DATA FILE:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/datafile_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/hint_password"
+            android:paddingRight="15dp"
+            android:text=""
+            android:textSize="20dp" />
+
+
+        <Button
+            android:id="@+id/train_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Train"
+            android:textStyle="bold"
+            />
+        <Button
+            android:id="@+id/picktestfile_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pick Test File"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/testfileStatic_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/hint_password"
+            android:paddingRight="15dp"
+            android:text="TEST FILE:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/testfile_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/hint_password"
+            android:paddingRight="15dp"
+            android:text=""
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/test_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Test"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

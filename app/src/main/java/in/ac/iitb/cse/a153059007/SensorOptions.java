@@ -7,5 +7,5 @@ package in.ac.iitb.cse.a153059007;
 public class SensorOptions {
     public static boolean isAccel = false;
     public static boolean isGPS= false;
-
+    public static String label = "stationary";
 }

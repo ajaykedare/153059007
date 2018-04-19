@@ -29,6 +29,9 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             case 2:
                 RecordActivityFragment recordActivityFragment = new RecordActivityFragment();
                 return recordActivityFragment;
+            case 3:
+                SVMActivityFragment svmActivityFragment = new SVMActivityFragment();
+                return svmActivityFragment;
             default:
                 return null;
         }

@@ -18,6 +18,7 @@
     <string name="prompt_lastname">Lastname</string>
     <string name="prompt_phone">Mobile No</string>
     <string name="prompt_age">Age</string>
+    <string name="prompt_label">Label</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="hint_gender">Gender</string>
@@ -28,4 +29,5 @@
     <string name="error_field_required">Required Field</string>
     <string name="error_invalid_email">Enter valid email. Should contain @ </string>
     <string name="error_invalid_mobile">Enter 10 digit mobile number</string>
+    <string name="PREF_FILE">153059007_PREF_FILE</string>
 </resources>
