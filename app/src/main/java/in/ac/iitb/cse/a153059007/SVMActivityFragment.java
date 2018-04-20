@@ -271,10 +271,16 @@ public class SVMActivityFragment extends Fragment{
         // Write to the output file
         try{
             myOutWriter.append(userinfo+"\n");
+            myOutWriter.append("timestamp,lat,long,accelx,accely,accelz,label,prediction"+"\n");
             for(int i=0;i<linesTest.size(); i++){
                 StringBuffer sb = new StringBuffer();
                 sb.append(linesTest.get(i)+ " ");
-                sb.append(linesResult.get(i)+ "\n");
+                if(linesResult.get(i).equals("0")){
+                    sb.append("stationary\n");
+                } else{
+                    sb.append("walking\n");
+                }
+
                 myOutWriter.append(sb.toString());
             }
 
